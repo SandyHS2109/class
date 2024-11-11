@@ -1,0 +1,163 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Rollover Animation | Sandy Similien, 2024</title>
+	
+	<link rel="stylesheet" href="https://use.typekit.net/uda5jxv.css">
+	
+	<style type="text/css">
+		body {
+			margin: 0;
+			padding: 0;
+			background-color: #FFFFFF;
+		}
+		wrapper {
+			width: 1000px;
+			margin: 0px auto;
+			display: block;
+		}
+		header {
+			height: 100px;
+			background-color: rgba(0,160,255,0.75);
+		}
+		#more{
+			margin: 0px auto;
+			padding-top: 24px;
+			padding-right: 0px;
+			padding-left: 0px;
+			padding-bottom: 24px;
+			color: #363668;
+			text-align: center;
+			font-family: "cheesecake", sans-serif;
+			font-size: 56px;
+			font-weight: 900;
+			font-style: normal;
+			text-shadow: -2px 2px #FFFFFF;
+			overflow: hidden;
+			white-space: nowrap;
+			animation:typing 3s 2s steps(25, end) backwards;
+			}
+
+			@keyframes typing{0%{width:0%;} 100%{width:100%;}}
+		
+
+		main {
+			background-color: #EF486D;
+			height: 500px;
+			width: 100%;
+			color: #FFFFFF;
+			position: relative;
+			padding: 36px 0px;
+			margin: 0;
+			display: inline-block;
+			}
+		main h1, h2, h3{
+			margin: 0px;
+			padding: 0px;
+			font-size: 115px;
+			position: absolute;
+			left: 0px;
+			}
+		#distinct{
+			font-family: "adelphi-pe-variable",sans-serif;
+			font-variation-settings: 'wght' 700, 'opsz' 6, 'slnt' 0;
+			left: 180px;
+			top: 0px;
+			transition: all .5s;
+			}
+		#distinct:hover{
+			font-variation-settings: 'wght' 100, 'opsz' 18, 'slnt' 0;
+			}
+		#living{
+			font-family: "kablammo-variable", sans-serif;
+			font-variation-settings: "MORF" 0;
+			font-size: 90px;
+			left: 99px;
+			top: 146px;    
+			transition: all .5s;
+			}
+		#living:hover{
+			font-variation-settings: "MORF" 60;
+			}
+		#whole{
+			font-family: "pauline-didone-variable",sans-serif;
+			font-variation-settings: 'wght' 100;
+			left: 615px;
+			top: 145px;
+			transition: all .5s;
+			}
+		#whole:hover{
+				font-variation-settings: 'wght' 700;
+			}
+		#hb{
+			font-family: "futura-pt-bold", sans-serif;
+			font-weight: 700;
+			font-style: normal;	
+			transition: all .5s;
+			}
+		#human{
+			display: inline-block;
+			position: absolute;
+			bottom: 205px;
+			left: 482px;
+			line-height: .95
+			}
+		#hb:hover{
+			font-variant: small-caps;
+			letter-spacing: 10px;
+			color: #363668;
+			text-shadow: -3px 2px #FFFFFF;
+			}
+		#being{
+			bottom: 60px;
+			left: 580px;
+			}
+		#womb{
+			width: 300px;
+			position: absolute;
+			left: 117px;
+			bottom: 53px;
+			}
+		#womb:hover{
+			animation: pulse 1s ease infinite;
+			}
+				@keyframes pulse{
+					0%, 35%, 70%, 100%{transform: scale(1);}
+					15%, 55%{transform: scale(1.1);}
+				}
+		footer {
+			height: 100px;
+			margin-top: -4px;
+			margin-right: auto;
+			margin-left: auto;
+			margin-bottom: 0px;
+			padding: 8px 16px;
+			background-color: rgba(0,160,255,0.75);
+			color: #363668;
+			}
+	</style>
+</head>
+
+<body>
+<wrapper>
+  <header>
+	  <h1 id="more">More than just a choice</h1>
+	
+	</header>
+  	<main>
+		<h1 id="distinct">distinct</h1>
+		<h2 id="living">living and</h2>
+		<h3 id="whole">whole</h3>
+		<img src="baby-in-womb-white.png" id="womb" alt=""/>
+		<div id="hb">
+			<h1 id="human">human</h1>
+			<h1 id="being">being</h1>
+		</div>
+	</main>
+	<footer>
+		<p>&copy 2024, Sandy Similien.<br>This is a fictitious web page created solely for the purpose of education and training. All products and people associated with this web page are also fictitious. Any resemblance to real brands, products, or people is purely coincidental. Information provided about the product is also fictitious and should not be construed to be representative of actual products on the market in a similar product category.</p>
+	</footer>
+</wrapper>
+</body>
+</html>
