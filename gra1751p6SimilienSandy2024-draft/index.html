@@ -1,0 +1,175 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>There And Back Again | Sandy Similien, 2024</title>
+<link rel="stylesheet" href="https://use.typekit.net/veg1awa.css">
+	
+<style type="text/css">
+body {
+    padding: 0px;
+    margin: 0px;
+    background-image: url(wallpaper3.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+header {
+    background-color: rgba(3,166,120,0.50);
+    height: 150px;
+    text-align: center;
+}
+.logo {
+    height: 75px;
+    width: auto;
+    margin-left: 32px;
+}
+wrapper {
+    width: 1366px;
+    margin: 32px auto;
+    display: block;
+    border-radius: 16px;
+    background-color: rgba(1,64,28,0.50);
+}
+#Tabs1 ul {
+    background-image: none;
+    border: none;
+    background-color: transparent;
+}
+#Tabs1 {
+    background-image: none;
+    border: none;
+    background-color: transparent;
+}
+#Tabs1 li {
+    background-image: none;
+    background-color: rgba(0,136,101,0.50);
+    margin: 8px;
+    text-align: center;
+    border: thin solid #01401C;
+    border-radius: 8px;
+}
+#Tabs1 li:hover {
+    background-color: rgba(144,238,144,0.50);
+}
+#Tabs1 a {
+    color: #EFB620;
+    font-family: "galahad-std", sans-serif;
+    letter-spacing: 2px;
+}
+input , select{
+    margin: 8px;
+    padding: 8px;
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    border-radius: 8px;
+    border: thin solid #EFB620;
+}
+section {
+    width: 50%;
+    display: inline-block;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin-right: -4px;
+}
+#submit {
+    width: 200px;
+    margin-top: 22px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 0;
+    background-color: #EFB620;
+    display: block;
+    color: #01401C;
+    font-family: "galahad-std", sans-serif;
+    font-size: 24px;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+#tagline {
+    color: #01401C;
+    margin: 0px;
+    padding-top: 24px;
+    padding-right: 0px;
+    padding-left: 0px;
+    padding-bottom: 0px;
+    font-size: 34px;
+    font-family: "antiquarian-scribe", sans-serif;
+}
+h1 {
+    color: #EFB620;
+    margin: 0px;
+    padding: 0px;
+    font-size: 60px;
+    font-family: "cc-near-myth-fables", sans-serif;
+    text-shadow: -4px -2px 2px #01401C;
+}
+</style>
+<link href="jQueryAssets/jquery.ui.core.min.css" rel="stylesheet" type="text/css">
+<link href="jQueryAssets/jquery.ui.theme.min.css" rel="stylesheet" type="text/css">
+<link href="jQueryAssets/jquery.ui.tabs.min.css" rel="stylesheet" type="text/css">
+<script src="jQueryAssets/jquery-1.11.1.min.js"></script>
+<script src="jQueryAssets/jquery.ui-1.10.4.tabs.min.js"></script>
+</head>
+
+<body>
+<header>
+	<!--img src="placeholderLogo.png" alt="" width="60" height="60" class="logo"-->
+	<p id="tagline">When travelling through Middle-Earth, its better to go...</p>
+	<h1>There And Back Again</h1>
+</header>
+<wrapper>
+  <div id="Tabs1">
+    <ul>
+      <li><a href="#tabs-1"><img src="placeholderLogo.png" alt="" width="60" height="60"><br>
+      Flights</a></li>
+      <li><a href="#tabs-2"><img src="placeholderLogo.png" alt="" width="60" height="60"><br>
+      Stays</a></li>
+      <li><a href="#tabs-3"><img src="placeholderLogo.png" alt="" width="60" height="60"><br>
+      Rides</a></li>
+      <li><a href="#tabs-4"><img src="placeholderLogo.png" alt="" width="60" height="60"><br>
+      Cruises</a></li>
+      <li><a href="#tabs-5"><img src="placeholderLogo.png" alt="" width="60" height="60"><br>
+      Things to Do</a></li>
+    </ul>
+    <div id="tabs-1">
+      <input type="text" placeholder="Going To">
+      <section><input type="date"></section>
+	  <section><input type="date"></section>
+	  <select>
+	    <option value="0">Number of Travelers</option>
+	    <option value="1">1</option>
+	    <option value="2">2</option>
+	    <option value="3">3</option>
+	    <option value="4">4</option>
+	    <option value="5">5</option>
+	    <option value="6">6</option>
+	    <option value="7">7</option>
+	    <option value="8">8</option>
+	    <option value="9">9</option>
+      </select>
+		<input name="submit" type="submit" id="submit">
+    </div>
+    <div id="tabs-2">
+      <p>Content 2</p>
+    </div>
+    <div id="tabs-3">
+      <p>Content 3</p>
+    </div>
+    <div id="tabs-4">
+      <p>Content 4</p>
+    </div>
+    <div id="tabs-5">
+      <p>Content 5</p>
+    </div>
+  </div>
+</wrapper>
+<script type="text/javascript">
+$(function() {
+	$( "#Tabs1" ).tabs(); 
+});
+</script>
+</body>
+</html>
