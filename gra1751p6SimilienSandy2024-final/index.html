@@ -1,0 +1,395 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>There And Back Again | Sandy Similien, 2024</title>
+<link rel="stylesheet" href="https://use.typekit.net/veg1awa.css">
+	
+<style type="text/css">
+body {
+    padding: 0px;
+    margin: 0px;
+    background-image: url(wallpaper3.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+footer {
+    background-color: rgba(3,166,120,0.50);
+    color: #EFB620;
+}
+header {
+    background-color: rgba(3,166,120,0.50);
+    height: 150px;
+    text-align: center;
+}
+.logo {
+    height: 115px;
+    display: inline-block;
+    float: left;
+	padding: 16px;
+}
+	#masthead{
+		display:inline-block;
+		margin-left:-127px;
+	}
+wrapper {
+    width: 1366px;
+    margin: 32px auto;
+    display: block;
+    border-radius: 16px;
+    background-color: rgba(1,64,28,0.50);
+}
+#Tabs1 ul {
+    background-image: none;
+    border: none;
+    background-color: transparent;
+    text-align: center;
+    margin: 0 auto;
+    width: 800px;
+}
+#Tabs1 {
+    background-image: none;
+    border: none;
+    background-color: transparent;
+}
+#Tabs1 li {
+    background-image: none;
+    background-color: rgba(3,166,120,0.50);
+    margin: 8px;
+    text-align: center;
+    border: thin solid #01401C;
+    border-radius: 8px;
+}
+#Tabs1 li:hover {
+    background-color: #01401C;
+    border-color: #EFB620;
+}
+#Tabs1 a {
+    color: #EFB620;
+    font-family: "galahad-std", sans-serif;
+    letter-spacing: 2px;
+    text-shadow: 1px 1px #01401C;
+    font-size: 20px;
+}
+input , select{
+    margin-top: 8px;
+    margin-right: 8px;
+    margin-left: 8px;
+    margin-bottom: 32px;
+    padding-top: 8px;
+    padding-right: 8px;
+    padding-left: 8px;
+    padding-bottom: 8px;
+    width: 90%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    border-radius: 8px;
+    border: thin solid #EFB620;
+}
+.split{
+	margin-top: 8px;
+    margin-right: 8px;
+    margin-left: 8px;
+    margin-bottom: 32px;
+    padding-top: 8px;
+    padding-right: 8px;
+    padding-left: 8px;
+    padding-bottom: 8px;
+    width: 43%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    border-radius: 8px;
+    border: thin solid #EFB620;
+
+	}
+section {
+    width: 350px;
+    display: inline-block;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.submit {
+    width: auto;
+    margin-top: 22px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 0;
+    background-color: #EFB620;
+    display: block;
+    color: #01401C;
+    font-family: "galahad-std", sans-serif;
+    font-size: 20px;
+    letter-spacing: 2px;
+    font-weight: bold;
+    border-radius: 8px;
+    height: 34px;
+    min-width: 150px;
+}
+#tagline {
+    color: #01401C;
+    margin: 0px;
+    padding-top: 24px;
+    padding-right: 0px;
+    padding-left: 0px;
+    padding-bottom: 0px;
+    font-size: 34px;
+    font-family: "antiquarian-scribe", sans-serif;
+}
+h1 {
+    color: #EFB620;
+    margin: 0px;
+    padding: 0px;
+    font-size: 60px;
+    font-family: "cc-near-myth-fables", sans-serif;
+    text-shadow: -4px -2px 2px #01401C;
+}
+	.icon{
+    height: 100px;
+	}
+#tabs-1, #tabs-2, #tabs-3, #tabs-4, #tabs-5{
+    width: 100%;
+    padding-top: 32px;
+    padding-left: 56px;
+}
+aside{
+	display:inline-block;
+	vertical-align:top;
+	}
+.form{
+    display: inline-block;
+    width: 800px;
+}
+.meme{
+    display: inline-block;
+    width: 350px;
+	
+}
+.memeCap{
+	border: thick ridge rgba(239,182,32,1.00);
+    border-radius: 16px;
+	}
+footer p {
+    margin: 0 auto;
+    padding: 16px;
+}
+label{
+    color: #EFB620;
+    font-family: "galahad-std", sans-serif;
+    padding-left: 16px;
+    font-size: 20px;
+}
+</style>
+<link href="jQueryAssets/jquery.ui.core.min.css" rel="stylesheet" type="text/css">
+<link href="jQueryAssets/jquery.ui.theme.min.css" rel="stylesheet" type="text/css">
+<link href="jQueryAssets/jquery.ui.tabs.min.css" rel="stylesheet" type="text/css">
+<script src="jQueryAssets/jquery-1.11.1.min.js"></script>
+<script src="jQueryAssets/jquery.ui-1.10.4.tabs.min.js"></script>
+</head>
+
+<body>
+<header>
+	<img src="tabaLogo.png" alt="" class="logo"/>
+	<div id="masthead">
+	<p id="tagline">When travelling through Middle-Earth, its better to go...</p>
+	<h1>There And Back Again</h1>
+		</div>
+</header>
+<wrapper>
+  <div id="Tabs1">
+    <ul>
+      <li><a href="#tabs-1"><img src="flightsIcon.png" class="icon" alt=""><br>
+      Flights</a></li>
+      <li><a href="#tabs-2"><img src="staysIcon.png" class="icon" alt=""><br>
+      Stays</a></li>
+      <li><a href="#tabs-3"><img src="ridesIcon.png" class="icon" alt=""><br>
+      Rides</a></li>
+      <li><a href="#tabs-4"><img src="cruisesIcon.png" class="icon" alt=""><br>
+      Cruises</a></li>
+      <li><a href="#tabs-5"><img src="questsIcon.png" class="icon" alt=""><br>
+      Quests</a></li>
+    </ul>
+    <div id="tabs-1">
+		  <aside class="form">
+			  <section><input type="text" placeholder="Departing From?"></section>
+			  <section><input type="text" placeholder="Going To?"></section>
+			  
+			  <section>
+				  <label for="departureDate">Departure</label><br>
+				  <input type="date" id="departureDate">
+			  </section>
+			  <section>
+				  <label for="returnDate">Return</label><br>
+				  <input type="date" id="returnDate">
+			  </section>
+			  
+			  <section><select>
+				<option value="0">Number of Travelers</option>
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5</option>
+				<option value="6">6</option>
+				<option value="7">7</option>
+				<option value="8">8</option>
+				<option value="9">9</option>
+			  </select></section>
+				<button class="submit">Book Your Eagle</button>
+			  </aside>
+    	
+		<aside class="meme">
+			<img src="flightsSideQuote.png" class="memeCap" width="300" alt=""/>
+		</aside>
+	</div>
+    <div id="tabs-2">
+		<aside class="form">
+			<section><input type="text" placeholder="Where To?"></section>
+		  	<section>
+				<select class="split">
+					<option value="0"># of Travelers</option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+					<option value="7">7</option>
+					<option value="8">8</option>
+					<option value="9">9</option>
+		  		</select>
+				<select class="split">
+					<option value="0"># of Rooms</option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+					<option value="7">7</option>
+					<option value="8">8</option>
+					<option value="9">9</option>
+		  		</select>
+				
+			</section>
+		<section>
+			<label for="checkIn">Check-In</label><br>
+			<input type="date" id="checkIn">
+		</section>
+		<section>
+			<label for="checkOut">Check-Out</label><br>
+			<input type="date" id="checkOut">
+		</section>
+		<button class="submit">Find A Hobbit Hole</button>
+    	</aside>
+    	
+		<aside class="meme">
+			<img src="staysSideQuote.png" class="memeCap" width="300" alt=""/>
+		</aside>
+    </div>
+    <div id="tabs-3">
+      <aside class="form">
+			<section><input type="text" placeholder="Village, Eyrie, or Address"></section>
+		  	<section>
+				<select>
+					<option value="0">Vehicle Type</option>
+					<option value="1">Cart</option>
+					<option value="2">Wagon</option>
+					<option value="3">Carriage</option>
+				</select>
+		  </section>
+		<section>
+			<label for="pickUp">Pick-Up</label><br>
+			<input type="date" id="pickUp" class="split">
+			<input type="time" class="split">
+		</section>
+		<section>
+			<label for="dropOff">Drop-Off</label><br>
+			<input type="date" id="dropOff" class="split">
+			<input type="time" class="split">
+		</section>
+		<button class="submit">Hitch A Wagon</button>
+    	</aside>
+    	
+		<aside class="meme">
+			<img src="RidesSideQuote.png" class="memeCap" width="300" alt=""/>
+		</aside>
+    </div>
+    <div id="tabs-4">
+      <aside class="form">
+		  <section>
+				<select>
+					<option value="0">Destination</option>
+					<option value="1">Alqualonde</option>
+					<option value="2">Dol Amroth</option>
+					<option value="3">Edhellond</option>
+					<option value="4">Romenna</option>
+					<option value="5">Grey Havens</option>
+					<option value="6">Umbar</option>
+				</select>
+		  </section>
+		  	<section>
+				<select>
+					<option value="0">Cruise Length</option>
+					<option value="1">All</option>
+					<option value="2">1-2 Nights</option>
+					<option value="3">3-5 Nights</option>
+					<option value="4">6-8 Nights</option>
+					<option value="5">9-11 Nights</option>
+					<option value="6">12+</option>
+				</select>
+		  </section>
+		<section>
+			<label for="setSail">Set Sail</label><br>
+			<input type="date" id="setSail">
+		</section>
+		<section>
+				<select>
+					<option value="0">Cruise Line (Any)</option>
+					<option value="1">Falathrim</option>
+					<option value="2">Laiquendi</option>
+					<option value="3">Moriquendi</option>
+					<option value="4">Nandor</option>
+					<option value="5">Silvan</option>
+					<option value="6">Sindar</option>
+					<option value="7">Vanyar</option>
+				</select>
+		  </section>
+		<button class="submit">All Aboard</button>
+    	</aside>
+    	
+		<aside class="meme">
+			<img src="cruisesSideQuote.png" class="memeCap" width="300" alt=""/>
+		</aside>
+    </div>
+    <div id="tabs-5">
+      <aside class="form">
+		  <section>
+			  <input type="text" placeholder="Going To?">
+		  </section>
+		  
+		  <section>
+				  <input type="date">
+		  </section>
+		
+		<button class="submit">Wander</button>
+    	</aside>
+    	
+		<aside class="meme">
+			<img src="questsSideQuote.png" class="memeCap" width="300" alt=""/>
+		</aside>
+    </div>
+  </div>
+</wrapper>
+	<footer>
+		<p>&copy; 2024, Sandy Similien. This is a fictitious web page created solely for the purpose of education and training. All products and people associated with this web page are also fictitious. Any resemblance to real brands, products, or people is purely coincidental. Information provided about the product is also fictitious and should not be construed to be representative of actual products on the market in a similar product category.</p>
+	</footer>
+<script type="text/javascript">
+$(function() {
+	$( "#Tabs1" ).tabs(); 
+});
+</script>
+</body>
+</html>
