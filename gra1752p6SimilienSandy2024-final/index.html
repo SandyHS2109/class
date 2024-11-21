@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+
+<!-- Created with Ai->Canvas Export Plug-In Version 1.8 (PC/64) -->
+<!-- By Mike Swanson (http://blog.mikeswanson.com/)             -->
+
+<html lang="en">
+ <head>
+  <meta charset="UTF-8" />
+  <title>canvasbuild</title>
+  <script src="Ai2CanvasAnimation.js"></script>
+  <script>
+
+    // Main canvas and context references
+    var canvas;
+    var ctx;
+
+    // Frames per second
+    var fps = 60.0;
+
+    // Animations
+    var animations = [ new ballPath1(), new ballPath2(), new ballPath3(), new ballPath4(), new ballPath5(), new ballPath6(), new ballPath7() ];
+
+    function ballPath1() {
+
+      // Control and anchor points
+      this.points = [
+                    [ [374.5, 935.5], [374.5, 935.5], [-338.0, 265.6], [574.7, 195.6] ]
+                    ];
+
+      // Linear motion index
+      this.linear = [
+                    [0, 0.00, 0.00], [0, 0.14, 0.05], [0, 0.21, 0.09], [0, 0.26, 0.14], 
+                    [0, 0.31, 0.18], [0, 0.36, 0.23], [0, 0.40, 0.27], [0, 0.45, 0.32], 
+                    [0, 0.49, 0.36], [0, 0.54, 0.41], [0, 0.59, 0.45], [0, 0.64, 0.50], 
+                    [0, 0.69, 0.55], [0, 0.74, 0.59], [0, 0.78, 0.64], [0, 0.82, 0.68], 
+                    [0, 0.85, 0.73], [0, 0.88, 0.77], [0, 0.91, 0.82], [0, 0.94, 0.86], 
+                    [0, 0.96, 0.91], [0, 0.98, 0.95], [0, 1.00, 1.00]
+                    ];
+
+      // Segment T boundaries
+      this.segmentT = [1.00];
+
+      this.lastValue = -1.0;
+      this.x = 0;
+      this.y = 0;
+      this.orientation = 0.0;
+      this.pathClock = new clock(1.00, 0.00, 1, false, 1, linear, this.linear.length - 1, 1.00, 0.0000);
+
+      // Update function
+      this.update = updatePath;
+    }
+
+    function ballPath2() {
+
+      // Control and anchor points
+      this.points = [
+                    [ [-98.5, 864.5], [-98.5, 864.5], [796.5, 864.5], [1106.5, 639.5] ],
+                    [ [1106.5, 639.5], [1277.7, 515.3], [1345.5, 286.5], [1243.6, 157.9] ],
+                    [ [1243.6, 157.9], [1185.4, 84.5], [936.6, 21.8], [788.5, 198.2] ]
+                    ];
+
+      // Linear motion index
+      this.linear = [
+                    [0, 0.00, 0.00], [0, 0.14, 0.02], [0, 0.20, 0.04], [0, 0.25, 0.07], 
+                    [0, 0.30, 0.09], [0, 0.34, 0.11], [0, 0.38, 0.13], [0, 0.41, 0.15], 
+                    [0, 0.44, 0.17], [0, 0.48, 0.20], [0, 0.51, 0.22], [0, 0.54, 0.24], 
+                    [0, 0.57, 0.26], [0, 0.60, 0.28], [0, 0.63, 0.30], [0, 0.66, 0.33], 
+                    [0, 0.69, 0.35], [0, 0.72, 0.37], [0, 0.75, 0.39], [0, 0.79, 0.41], 
+                    [0, 0.82, 0.43], [0, 0.85, 0.46], [0, 0.89, 0.48], [0, 0.93, 0.50], 
+                    [0, 0.97, 0.52], [1, 0.02, 0.54], [1, 0.10, 0.57], [1, 0.18, 0.59], 
+                    [1, 0.26, 0.61], [1, 0.35, 0.63], [1, 0.43, 0.65], [1, 0.52, 0.67], 
+                    [1, 0.61, 0.70], [1, 0.71, 0.72], [1, 0.81, 0.74], [1, 0.91, 0.76], 
+                    [2, 0.03, 0.78], [2, 0.17, 0.80], [2, 0.29, 0.83], [2, 0.39, 0.85], 
+                    [2, 0.49, 0.87], [2, 0.58, 0.89], [2, 0.67, 0.91], [2, 0.76, 0.93], 
+                    [2, 0.85, 0.96], [2, 0.92, 0.98], [2, 1.00, 1.00]
+                    ];
+
+      // Segment T boundaries
+      this.segmentT = [0.54, 0.78, 1.00];
+
+      this.lastValue = -1.0;
+      this.x = 0;
+      this.y = 0;
+      this.orientation = 0.0;
+      this.pathClock = new clock(1.00, 0.00, 1, false, 1, linear, this.linear.length - 1, 1.00, 0.0000);
+
+      // Update function
+      this.update = updatePath;
+    }
+
+    function ballPath3() {
+
+      // Control and anchor points
+      this.points = [
+                    [ [1488.5, 12.5], [1488.5, 12.5], [881.0, 1017.1], [342.3, 617.8] ],
+                    [ [342.3, 617.8], [-196.5, 218.5], [376.8, 39.5], [572.5, 84.5] ],
+                    [ [572.5, 84.5], [768.2, 129.5], [897.0, 384.0], [897.0, 384.0] ]
+                    ];
+
+      // Linear motion index
+      this.linear = [
+                    [0, 0.00, 0.00], [0, 0.12, 0.02], [0, 0.18, 0.04], [0, 0.22, 0.05], 
+                    [0, 0.26, 0.07], [0, 0.30, 0.09], [0, 0.33, 0.11], [0, 0.36, 0.12], 
+                    [0, 0.39, 0.14], [0, 0.42, 0.16], [0, 0.45, 0.18], [0, 0.48, 0.19], 
+                    [0, 0.51, 0.21], [0, 0.54, 0.23], [0, 0.56, 0.25], [0, 0.59, 0.26], 
+                    [0, 0.62, 0.28], [0, 0.65, 0.30], [0, 0.68, 0.32], [0, 0.71, 0.33], 
+                    [0, 0.74, 0.35], [0, 0.77, 0.37], [0, 0.80, 0.39], [0, 0.83, 0.40], 
+                    [0, 0.86, 0.42], [0, 0.89, 0.44], [0, 0.92, 0.46], [0, 0.95, 0.47], 
+                    [0, 0.98, 0.49], [1, 0.00, 0.51], [1, 0.03, 0.53], [1, 0.06, 0.54], 
+                    [1, 0.09, 0.56], [1, 0.12, 0.58], [1, 0.16, 0.60], [1, 0.21, 0.61], 
+                    [1, 0.26, 0.63], [1, 0.32, 0.65], [1, 0.39, 0.67], [1, 0.46, 0.68], 
+                    [1, 0.52, 0.70], [1, 0.58, 0.72], [1, 0.64, 0.74], [1, 0.69, 0.75], 
+                    [1, 0.75, 0.77], [1, 0.80, 0.79], [1, 0.86, 0.81], [1, 0.93, 0.82], 
+                    [2, 0.00, 0.84], [2, 0.09, 0.86], [2, 0.17, 0.88], [2, 0.25, 0.89], 
+                    [2, 0.34, 0.91], [2, 0.43, 0.93], [2, 0.52, 0.95], [2, 0.62, 0.96], 
+                    [2, 0.74, 0.98], [2, 1.00, 1.00]
+                    ];
+
+      // Segment T boundaries
+      this.segmentT = [0.51, 0.84, 1.00];
+
+      this.lastValue = -1.0;
+      this.x = 0;
+      this.y = 0;
+      this.orientation = 0.0;
+      this.pathClock = new clock(1.00, 0.00, 1, false, 1, linear, this.linear.length - 1, 1.00, 0.0000);
+
+      // Update function
+      this.update = updatePath;
+    }
+
+    function ballPath4() {
+
+      // Control and anchor points
+      this.points = [
+                    [ [413.5, -140.5], [413.5, -140.5], [959.0, 13.6], [1003.7, 226.0] ],
+                    [ [1003.7, 226.0], [1048.5, 438.5], [913.1, 573.0], [791.8, 581.3] ]
+                    ];
+
+      // Linear motion index
+      this.linear = [
+                    [0, 0.00, 0.00], [0, 0.18, 0.04], [0, 0.27, 0.09], [0, 0.34, 0.13], 
+                    [0, 0.40, 0.17], [0, 0.46, 0.22], [0, 0.51, 0.26], [0, 0.57, 0.30], 
+                    [0, 0.62, 0.35], [0, 0.68, 0.39], [0, 0.73, 0.43], [0, 0.79, 0.48], 
+                    [0, 0.86, 0.52], [0, 0.93, 0.57], [1, 0.01, 0.61], [1, 0.09, 0.65], 
+                    [1, 0.18, 0.70], [1, 0.28, 0.74], [1, 0.38, 0.78], [1, 0.49, 0.83], 
+                    [1, 0.61, 0.87], [1, 0.73, 0.91], [1, 0.86, 0.96], [1, 1.00, 1.00]
+                    ];
+
+      // Segment T boundaries
+      this.segmentT = [0.61, 1.00];
+
+      this.lastValue = -1.0;
+      this.x = 0;
+      this.y = 0;
+      this.orientation = 0.0;
+      this.pathClock = new clock(1.50, 1.00, 1, false, 1, linear, this.linear.length - 1, 1.00, 0.0000);
+
+      // Update function
+      this.update = updatePath;
+    }
+
+    function ballPath5() {
+
+      // Control and anchor points
+      this.points = [
+                    [ [-98.5, -121.5], [-98.5, -121.5], [-12.9, 329.0], [43.7, 338.5] ],
+                    [ [43.7, 338.5], [109.5, 349.5], [108.3, 236.1], [234.5, 280.5] ],
+                    [ [234.5, 280.5], [360.7, 324.9], [394.1, 654.4], [468.8, 666.4] ],
+                    [ [468.8, 666.4], [551.4, 679.8], [570.5, 569.7], [570.5, 569.7] ]
+                    ];
+
+      // Linear motion index
+      this.linear = [
+                    [0, 0.00, 0.00], [0, 0.21, 0.04], [0, 0.30, 0.08], [0, 0.38, 0.12], 
+                    [0, 0.46, 0.15], [0, 0.53, 0.19], [0, 0.60, 0.23], [0, 0.68, 0.27], 
+                    [0, 0.77, 0.31], [0, 0.88, 0.35], [1, 0.12, 0.38], [1, 0.42, 0.42], 
+                    [1, 0.68, 0.46], [1, 0.88, 0.50], [2, 0.03, 0.54], [2, 0.14, 0.58], 
+                    [2, 0.25, 0.62], [2, 0.34, 0.65], [2, 0.43, 0.69], [2, 0.52, 0.73], 
+                    [2, 0.61, 0.77], [2, 0.71, 0.81], [2, 0.83, 0.85], [3, 0.02, 0.88], 
+                    [3, 0.26, 0.92], [3, 0.54, 0.96], [3, 1.00, 1.00]
+                    ];
+
+      // Segment T boundaries
+      this.segmentT = [0.37, 0.53, 0.88, 1.00];
+
+      this.lastValue = -1.0;
+      this.x = 0;
+      this.y = 0;
+      this.orientation = 0.0;
+      this.pathClock = new clock(1.50, 0.00, 1, false, 1, linear, this.linear.length - 1, 1.00, 0.0000);
+
+      // Update function
+      this.update = updatePath;
+    }
+
+    function ballPath6() {
+
+      // Control and anchor points
+      this.points = [
+                    [ [1267.5, 935.5], [1267.5, 935.5], [800.9, -32.5], [467.2, 383.5] ]
+                    ];
+
+      // Linear motion index
+      this.linear = [
+                    [0, 0.00, 0.00], [0, 0.13, 0.04], [0, 0.19, 0.09], [0, 0.24, 0.13], 
+                    [0, 0.28, 0.17], [0, 0.32, 0.22], [0, 0.35, 0.26], [0, 0.39, 0.30], 
+                    [0, 0.42, 0.35], [0, 0.46, 0.39], [0, 0.49, 0.43], [0, 0.53, 0.48], 
+                    [0, 0.56, 0.52], [0, 0.60, 0.57], [0, 0.63, 0.61], [0, 0.67, 0.65], 
+                    [0, 0.71, 0.70], [0, 0.75, 0.74], [0, 0.80, 0.78], [0, 0.84, 0.83], 
+                    [0, 0.89, 0.87], [0, 0.93, 0.91], [0, 0.97, 0.96], [0, 1.00, 1.00]
+                    ];
+
+      // Segment T boundaries
+      this.segmentT = [1.00];
+
+      this.lastValue = -1.0;
+      this.x = 0;
+      this.y = 0;
+      this.orientation = 0.0;
+      this.pathClock = new clock(1.00, 0.00, 1, false, 1, linear, this.linear.length - 1, 1.00, 0.0000);
+
+      // Update function
+      this.update = updatePath;
+    }
+
+    function ballPath7() {
+
+      // Control and anchor points
+      this.points = [
+                    [ [672.2, -122.0], [675.4, 38.7], [678.5, 199.3], [681.8, 364.8] ],
+                    [ [681.8, 364.8], [681.7, 369.3], [681.6, 373.8], [681.5, 378.5] ],
+                    [ [681.5, 378.5], [682.2, 353.4], [682.8, 328.3], [683.5, 302.5] ],
+                    [ [683.5, 302.5], [683.5, 327.6], [683.4, 352.7], [683.4, 378.5] ]
+                    ];
+
+      // Linear motion index
+      this.linear = [
+                    [0, 0.00, 0.00], [0, 0.03, 0.02], [0, 0.05, 0.04], [0, 0.08, 0.06], 
+                    [0, 0.10, 0.07], [0, 0.13, 0.09], [0, 0.15, 0.11], [0, 0.18, 0.13], 
+                    [0, 0.20, 0.15], [0, 0.23, 0.17], [0, 0.25, 0.19], [0, 0.28, 0.20], 
+                    [0, 0.30, 0.22], [0, 0.33, 0.24], [0, 0.35, 0.26], [0, 0.38, 0.28], 
+                    [0, 0.40, 0.30], [0, 0.43, 0.31], [0, 0.45, 0.33], [0, 0.48, 0.35], 
+                    [0, 0.50, 0.37], [0, 0.53, 0.39], [0, 0.55, 0.41], [0, 0.57, 0.43], 
+                    [0, 0.60, 0.44], [0, 0.62, 0.46], [0, 0.65, 0.48], [0, 0.67, 0.50], 
+                    [0, 0.70, 0.52], [0, 0.72, 0.54], [0, 0.75, 0.56], [0, 0.77, 0.57], 
+                    [0, 0.80, 0.59], [0, 0.82, 0.61], [0, 0.85, 0.63], [0, 0.87, 0.65], 
+                    [0, 0.90, 0.67], [0, 0.92, 0.69], [0, 0.94, 0.70], [0, 0.97, 0.72], 
+                    [0, 0.99, 0.74], [1, 0.63, 0.76], [2, 0.09, 0.78], [2, 0.25, 0.80], 
+                    [2, 0.41, 0.81], [2, 0.57, 0.83], [2, 0.73, 0.85], [2, 0.89, 0.87], 
+                    [3, 0.05, 0.89], [3, 0.21, 0.91], [3, 0.37, 0.93], [3, 0.53, 0.94], 
+                    [3, 0.69, 0.96], [3, 0.84, 0.98], [3, 1.00, 1.00]
+                    ];
+
+      // Segment T boundaries
+      this.segmentT = [0.75, 0.77, 0.88, 1.00];
+
+      this.lastValue = -1.0;
+      this.x = 0;
+      this.y = 0;
+      this.orientation = 0.0;
+      this.pathClock = new clock(0.50, 0.00, 1, false, 1, linear, this.linear.length - 1, 1.00, 0.0000);
+
+      // Update function
+      this.update = updatePath;
+    }
+
+    function init() {
+
+      // Set main canvas and context references
+      canvas = document.getElementById("canvas");
+      ctx = canvas.getContext("2d");
+
+      // Initialize animations
+      sky.alphaClock = new clock(5.00, 0.00, -1, false, 1, linear, 1.0, 1.00, 0.0000);
+      swirl.rotateClock = new clock(5.00, 0.00, 1, false, 0, linear, 2.0 * Math.PI, 1.00, 0.0000);
+      swirl.alphaClock = new clock(3.00, 0.00, 1, false, 1, linear, 1.0, 1.00, 0.0000);
+      ball1.alphaClock = new clock(2.00, 0.00, -1, false, 1, linear, 1.0, 1.00, 0.0000);
+      ball2.alphaClock = new clock(2.00, 0.00, -1, false, 1, linear, 1.0, 1.00, 0.0000);
+      ball3.alphaClock = new clock(2.00, 0.00, -1, false, 1, linear, 1.0, 1.00, 0.0000);
+      ball4.alphaClock = new clock(2.00, 0.00, -1, false, 1, linear, 1.0, 1.00, 0.0000);
+      ball5.alphaClock = new clock(2.00, 0.00, -1, false, 1, linear, 1.0, 1.00, 0.0000);
+      ball6.alphaClock = new clock(2.00, 0.00, -1, false, 1, linear, 1.0, 1.00, 0.0000);
+      ball7.alphaClock = new clock(2.00, 0.00, -1, false, 1, linear, 1.0, 1.00, 0.0000);
+      shenron.scaleClock = new clock(1.00, 0.00, 1, false, 1, quadEaseIn, 1.0, 1.00, 0.0001);
+
+      // Configure animation triggers
+      animations[0].pathClock.iterated.subscribe(function() { sky.alphaClock.start(); });
+      animations[0].pathClock.iterated.subscribe(function() { swirl.rotateClock.start(); });
+      animations[0].pathClock.iterated.subscribe(function() { swirl.alphaClock.start(); });
+      swirl.rotateClock.iterated.subscribe(function() { ball1.alphaClock.start(); });
+      swirl.rotateClock.iterated.subscribe(function() { ball2.alphaClock.start(); });
+      swirl.rotateClock.iterated.subscribe(function() { ball3.alphaClock.start(); });
+      swirl.rotateClock.iterated.subscribe(function() { ball4.alphaClock.start(); });
+      swirl.rotateClock.iterated.subscribe(function() { ball5.alphaClock.start(); });
+      swirl.rotateClock.iterated.subscribe(function() { ball6.alphaClock.start(); });
+      swirl.rotateClock.iterated.subscribe(function() { ball7.alphaClock.start(); });
+      swirl.rotateClock.iterated.subscribe(function() { shenron.scaleClock.start(); });
+      animations[6].pathClock.iterated.subscribe(function() { animations[0].pathClock.start(); });
+      animations[3].pathClock.iterated.subscribe(function() { animations[1].pathClock.start(); });
+      animations[4].pathClock.iterated.subscribe(function() { animations[2].pathClock.start(); });
+      animations[3].pathClock.iterated.subscribe(function() { animations[4].pathClock.start(); });
+      animations[2].pathClock.iterated.subscribe(function() { animations[5].pathClock.start(); });
+      animations[5].pathClock.iterated.subscribe(function() { animations[6].pathClock.start(); });
+
+      // Start animation clocks
+      animations[3].pathClock.start();
+
+      // Set animation timer
+      setInterval(drawFrame, (1000 / fps));
+    }
+
+    function updateAnimations() {
+
+      // Update animation clocks
+      updateAllClocks();
+
+      // Update animation paths  
+      var animationCount = animations.length;
+      for (var i = 0; i < animationCount; i++) {
+        animations[i].update();
+      }
+    }
+
+    function drawFrame() {
+
+      // Update animations
+      updateAnimations();
+
+      // Clear canvas
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      bg(ctx);
+
+      ctx.save();
+      ctx.globalAlpha = sky.alphaClock.value;
+      sky(ctx);
+      ctx.restore();
+
+      ctx.save();
+      ctx.translate(683.0, 384.0);
+      ctx.rotate(swirl.rotateClock.value);
+      ctx.globalAlpha = swirl.alphaClock.value;
+      swirl(ctx);
+      ctx.restore();
+
+      ctx.save();
+      ctx.translate(animations[0].x, animations[0].y);
+      ctx.globalAlpha = ball1.alphaClock.value;
+      ball1(ctx);
+      ctx.restore();
+
+      ctx.save();
+      ctx.translate(animations[1].x, animations[1].y);
+      ctx.globalAlpha = ball2.alphaClock.value;
+      ball2(ctx);
+      ctx.restore();
+
+      ctx.save();
+      ctx.translate(animations[2].x, animations[2].y);
+      ctx.globalAlpha = ball3.alphaClock.value;
+      ball3(ctx);
+      ctx.restore();
+
+      ctx.save();
+      ctx.translate(animations[3].x, animations[3].y);
+      ctx.globalAlpha = ball4.alphaClock.value;
+      ball4(ctx);
+      ctx.restore();
+
+      ctx.save();
+      ctx.translate(animations[4].x, animations[4].y);
+      ctx.globalAlpha = ball5.alphaClock.value;
+      ball5(ctx);
+      ctx.restore();
+
+      ctx.save();
+      ctx.translate(animations[5].x, animations[5].y);
+      ctx.globalAlpha = ball6.alphaClock.value;
+      ball6(ctx);
+      ctx.restore();
+
+      ctx.save();
+      ctx.translate(animations[6].x, animations[6].y);
+      ctx.globalAlpha = ball7.alphaClock.value;
+      ball7(ctx);
+      ctx.restore();
+
+      ctx.save();
+      ctx.translate(683.0, 391.5);
+      ctx.scale(shenron.scaleClock.value, shenron.scaleClock.value);
+      shenron(ctx);
+      ctx.restore();
+    }
+
+    function bg(ctx) {
+
+      // bg/Rectangle
+      ctx.save();
+      ctx.beginPath();
+      ctx.moveTo(1366.0, 768.0);
+      ctx.lineTo(0.0, 768.0);
+      ctx.lineTo(0.0, 0.0);
+      ctx.lineTo(1366.0, 0.0);
+      ctx.lineTo(1366.0, 768.0);
+      ctx.closePath();
+      ctx.fillStyle = "rgb(255, 172, 1)";
+      ctx.fill();
+      ctx.restore();
+    }
+
+    function sky(ctx) {
+
+      // sky/Linked File
+      ctx.save();
+      ctx.save();
+      ctx.transform(0.711, 0.000, -0.000, 0.711, 683.0, 384.0);
+      ctx.drawImage(document.getElementById("image1"), -960.0, -540.0);
+      ctx.restore();
+      ctx.restore();
+    }
+
+    function swirl(ctx) {
+
+      // swirl/Linked File
+      ctx.save();
+      ctx.save();
+      ctx.transform(0.240, 0.000, -0.000, 0.240, 0.0, 0.0);
+      ctx.drawImage(document.getElementById("image2"), -3347.5, -3348.0);
+      ctx.restore();
+      ctx.restore();
+    }
+
+    function ball1(ctx) {
+
+      // ball1
+      ctx.drawImage(document.getElementById("image3"), -75.5, -76.0);
+    }
+
+    function ball2(ctx) {
+
+      // ball2
+      ctx.drawImage(document.getElementById("image4"), -76.0, -75.5);
+    }
+
+    function ball3(ctx) {
+
+      // ball3
+      ctx.drawImage(document.getElementById("image5"), -76.0, -75.5);
+    }
+
+    function ball4(ctx) {
+
+      // ball4
+      ctx.drawImage(document.getElementById("image6"), -76.0, -75.5);
+    }
+
+    function ball5(ctx) {
+
+      // ball5
+      ctx.drawImage(document.getElementById("image7"), -76.0, -75.5);
+    }
+
+    function ball6(ctx) {
+
+      // ball6
+      ctx.drawImage(document.getElementById("image8"), -76.0, -75.5);
+    }
+
+    function ball7(ctx) {
+
+      // ball7
+      ctx.drawImage(document.getElementById("image9"), -76.0, -75.5);
+    }
+
+    function shenron(ctx) {
+
+      // shenron/Linked File
+      ctx.save();
+      ctx.save();
+      ctx.transform(0.888, 0.000, -0.000, 0.888, 0.0, 0.0);
+      ctx.drawImage(document.getElementById("image10"), -288.5, -424.0);
+      ctx.restore();
+      ctx.restore();
+    }
+  </script>
+ </head>
+ <body onload="init()">
+   <canvas id="canvas" width="1366" height="768"></canvas>
+   <img alt="Linked File" id="image1" style="display: none" src="file:///C:/Users/Sandy%20H.%20Simillien/Documents/2%20-%20Miami%20Dade%20College/3%20-%20Fall%202024/1752-Motion%20Graphics/6%20-%20HTML5%20Canvas/Project%20Assets/gokuNimbus.jpg" />
+   <img alt="Linked File" id="image2" style="display: none" src="file:///C:/Users/Sandy%20H.%20Simillien/Documents/2%20-%20Miami%20Dade%20College/3%20-%20Fall%202024/1752-Motion%20Graphics/6%20-%20HTML5%20Canvas/Project%20Assets/lightSwirl.png" />
+   <img alt="ball1" id="image3" style="display: none" src="ball1.png" />
+   <img alt="ball2" id="image4" style="display: none" src="ball2.png" />
+   <img alt="ball3" id="image5" style="display: none" src="ball3.png" />
+   <img alt="ball4" id="image6" style="display: none" src="ball4.png" />
+   <img alt="ball5" id="image7" style="display: none" src="ball5.png" />
+   <img alt="ball6" id="image8" style="display: none" src="ball6.png" />
+   <img alt="ball7" id="image9" style="display: none" src="ball7.png" />
+   <img alt="Linked File" id="image10" style="display: none" src="file:///C:/Users/Sandy%20H.%20Simillien/Documents/2%20-%20Miami%20Dade%20College/3%20-%20Fall%202024/1752-Motion%20Graphics/6%20-%20HTML5%20Canvas/gra1752p5SimilienSandy2024/Design/shenron3.png" />
+ </body>
+</html>
